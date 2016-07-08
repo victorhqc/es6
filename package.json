@@ -4,7 +4,9 @@
   "description": "Just a repo for ES6 Examples and JS tips",
   "main": "es6.js",
   "scripts": {
-    "start": "babel-node server.js --presets es2015"
+    "start": "babel-node server.js --presets es2015",
+    "dev-serve": "NODE_ENV=test babel-node server.js --presets es2015",
+    "test": "NODE_ENV=test mocha test/pokemon.js --compilers js:babel-register --reporter nyan"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,12 @@
   },
   "homepage": "https://github.com/victorhqc/es6#readme",
   "devDependencies": {
+    "assert": "^1.4.1",
     "babel-cli": "^6.10.1",
-    "babel-preset-es2015": "^6.9.0"
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "should": "^9.0.2",
+    "supertest": "^1.2.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

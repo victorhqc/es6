@@ -20,6 +20,7 @@ export class PokemonController {
     store(req, res) {
         const data = {
             name: req.body.name,
+            number: req.body.number,
             types: req.body.types,
             regions: req.body.regions
         };

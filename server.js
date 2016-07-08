@@ -5,7 +5,10 @@ import express from 'express';
 import Injector from './pokedex/src/Injector';
 
 var app = express();
+
+//application/json
 app.use(bodyParser.json());
+//x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {

@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var PokemonSchema = new Schema({
   name:  String,
+  number: Number,
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
   deletedAt: { type: Date, default: null },
