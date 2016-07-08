@@ -1,24 +1,17 @@
-//var express = require('express');
+require('./pokedex/boot/db');
+var bodyParser = require('body-parser');
+
 import express from 'express';
 import Injector from './pokedex/src/Injector';
 
 var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     res.send({
         message: 'Welcome to Pokedex!'
     });
-});
-
-//require mongoose node module
-var mongoose = require('mongoose');
-
-//connect to local mongodb database
-var db = mongoose.connect('mongodb://192.168.99.100:27017/pokedex');
-
-//attach lister to connected event
-mongoose.connection.once('connected', function() {
-	console.log("Connected to database");
 });
 
 new Injector( app );

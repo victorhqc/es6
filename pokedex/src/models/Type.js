@@ -9,5 +9,5 @@ var TypeSchema = new Schema({
 });
 
 var Type = mongoose.model('Type', TypeSchema);
-    
+
 export default Type;
