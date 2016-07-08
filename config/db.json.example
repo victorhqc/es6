@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "db": "pokedex",
+    "port": "27017",
+    "user": "user",
+    "password": "password"
+}
