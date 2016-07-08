@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 const fs = require('fs');
 
-fs.readFile('config/db.local.json', 'utf8', function (err, data) {
+fs.readFile(`config/db.${process.env.NODE_ENV || 'local'}.json`, 'utf8', function (err, data) {
     if (err) { return console.log(err); }
 
     data = JSON.parse(data);
